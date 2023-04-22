@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forkscanner Wallet Integration</title>
+  </head>
+  <body>
+    <h1>Nodes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>IP Address</th>
+          <th>Version</th>
+          <th>Blocks</th>
+          <th>Latency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% nodes.forEach(node => { %>
+          <tr>
+            <td><%= node.ip %></td>
+            <td><%= node.version %></td>
+            <td><%= node.blocks %></td>
+            <td><%= node.latency %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <h1>Wallet Balance</h1>
+    <p>Your wallet address: <%= address %></p>
+    <p>Your wallet balance: <%= balance %> BTC</p>
+  </body>
+</html>
