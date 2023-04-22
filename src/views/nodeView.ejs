@@ -1,33 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Forkscanner Wallet Integration</title>
-  </head>
-  <body>
-    <h1>Nodes</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>IP Address</th>
-          <th>Version</th>
-          <th>Blocks</th>
-          <th>Latency</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% nodes.forEach(node => { %>
-          <tr>
-            <td><%= node.ip %></td>
-            <td><%= node.version %></td>
-            <td><%= node.blocks %></td>
-            <td><%= node.latency %></td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
 
-    <h1>Wallet Balance</h1>
-    <p>Your wallet address: <%= address %></p>
-    <p>Your wallet balance: <%= balance %> BTC</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forkscanner Wallet Integration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0072c6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0072c6;
+      color: #fff;
+      font-weight: normal;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .balance-container {
+      margin: 20px auto;
+      width: 50%;
+    }
+
+    .balance-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Forkscanner Wallet Integration</h1>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>IP Address</th>
+        <th>Version</th>
+        <th>Blocks</th>
+        <th>Latency (ms)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% nodes.forEach(node => { %>
+      <tr>
+        <td><%= node.ip %></td>
+        <td><%= node.version %></td>
+        <td><%= node.blocks %></td>
+        <td><%= node.latency %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <div class="balance-container">
+    <div class="balance-label">Wallet Balance:</div>
+    <div><%= balance %> BTC</div>
+    <div class="balance-label">Wallet Address:</div>
+    <div><%= address %></div>
+  </div>
+
+</body>
+
 </html>
+
