@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forkscanner Wallet Integration</title>
+
+    <!-- Importing main.css file -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Importing external fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <img src="./images/logo.png" alt="Logo" />
+          <h1>Forkscanner Wallet Integration</h1>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#nodes" class="nav-link">Nodes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#wallet" class="nav-link">Wallet</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="nodes">
+        <div class="container">
+          <h2>Bitcoin Nodes Monitoring</h2>
+          <p>
+            Forkscanner allows for the monitoring of multiple bitcoin nodes for a variety of anomalies: nodes lagging behind, inflated blocks, stale blocks and transactions from user-specified addresses.
+          </p>
+          <p>
+            Here you can view the status of all monitored nodes:
+          </p>
+          <div class="nodes-grid">
+            <div class="node-card">
+              <h3>Node 1</h3>
+              <p><span>Status:</span> Lagging behind</p>
+              <p><span>Last Block Height:</span> 652,354</p>
+              <p><span>Last Block Time:</span> 2022-04-21 12:34:56</p>
+              <button class="btn btn-primary">Details</button>
+            </div>
+            <div class="node-card">
+              <h3>Node 2</h3>
+              <p><span>Status:</span> Normal</p>
+              <p><span>Last Block Height:</span> 652,354</p>
+              <p><span>Last Block Time:</span> 2022-04-21 12:34:56</p>
+              <button class="btn btn-primary">Details</button>
+            </div>
+            <div class="node-card">
+              <h3>Node 3</h3>
+              <p><span>Status:</span> Stale blocks</p>
+              <p><span>Last Block Height:</span> 652,354</p>
+              <p><span>Last Block Time:</span> 2022-04-21 12:34:56</p>
+              <button class="btn btn-primary">Details</button>
+            </div>
+            <div class="node-card">
+              <h3>Node 4</h3>
+              <p><span>Status:</span> Inflated blocks</p>
+              <p><span>Last Block Height:</span> 652
+            </div>
+        </div>
+        <script src="./bundle.js"></script>
+    </main>
+  </body>
+</html>
